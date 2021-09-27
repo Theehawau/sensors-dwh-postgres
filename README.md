@@ -1,4 +1,5 @@
-Welcome to your new dbt project!
+### Migrating Sensors Data Warehouse from MySQL to PostgreSQL
+This repository is about Data Migration.
 
 ### Using the starter project
 
