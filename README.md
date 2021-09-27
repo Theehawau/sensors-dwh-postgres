@@ -1,5 +1,5 @@
 ### Migrating Sensors Data Warehouse from MySQL to PostgreSQL
-This repository is about Data Migration.
+This repository is about Data Migration. [pgloader](https://github.com/dimitri/pgloader) is used for migrating database from MySQL to PostgreSQL.
 
 ### Using the starter project
 
