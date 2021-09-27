@@ -1,0 +1,61 @@
+version: 2
+
+models:
+  - name: station_values
+    description: Records for named stations for weekday
+    columns:
+      - name: station_id
+        description: Unique identifier for a Station
+        tests:
+          - not_null
+          - relationships:
+              to: ref('stations')
+              field: ID
+      - name: District
+        description: District name for station
+      - name: Name
+        description: Station name
+      - name: totalflow
+        description: Total flow measured in the station for time in timestamp
+        tests:
+      - name: timestamp
+        description: Timestamp of record
+
+  - name: stations
+    description: Table for Stations metadata
+    columns:
+      - name: ID
+        description: Unique identifier for a Station
+        tests:
+          - not_null
+          - unique
+      - name: District
+        description: District name for station
+      - name: Name
+        description: Station name
+      - name: Lanes
+        description: Number of lanes for station
+      - name: Type
+        description: Station type
+  
+  - name: richard
+    description: Timestamped Records for Richards Avenue 
+    columns:
+      - name: timestamp
+        description: Record time stamp
+        tests:
+          - not_null
+      - name: flow1
+        description: Value for flow1
+      - name: flow2
+        description: Value for flow2
+      - name: flow3
+        description: Value for flow3
+      - name: occupancy1
+        description: Value for occupancy1
+      - name: occupancy2
+        description: Value for occupancy2
+      - name: occupancy3
+        description: Value for occupancy3
+
+
